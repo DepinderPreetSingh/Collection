@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment</title>
+	<script type="text/javascript" src="/static/js/1.js" action="1.js"></script>
+	<script type="text/javascript" src="/static/js/sha256.js"></script>
+
+	<style type="text/css">
+    .container {
+        width: 500px;
+        clear: both;
+    }
+    .container input {
+        width: 40%;
+        clear: both;
+    }
+
+    </style>
+</head>
+	<body>
+		<div class="container">
+			<form name="collection"  method="post" >
+			 Name <input type="text" name="seller_name" value={{seller_name}} readonly /><br><br>
+			 Amnt <input type="text" name="amount" value={{amount}} readonly /><br><br>
+			</div>
+	    	<input type="button" value="Pay Now" onclick="payment('{{seller_name}}','{{email_id}}','{{amount}}')" />
+    	</form>
+	</body>
+</html>

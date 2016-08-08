@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.kristofa:brave-interfaces:2.4.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kristofa/brave-interfaces/2.4.2/7a3439a2bfdb1bad61ae4aa5b9d18dc119bf9b15/brave-interfaces-2.4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kristofa/brave-interfaces/2.4.2/63d8db0ff48085aef38c643fb3b092231a74b08e/brave-interfaces-2.4.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

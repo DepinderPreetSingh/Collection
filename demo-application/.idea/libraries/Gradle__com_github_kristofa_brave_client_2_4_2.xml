@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.kristofa:brave-client:2.4.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kristofa/brave-client/2.4.2/1d3381fff908d040c9edab767d206e6e6c2998e2/brave-client-2.4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kristofa/brave-client/2.4.2/7fdd2157bc59d82d27a47df6e2057d8e6d0c8c42/brave-client-2.4.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

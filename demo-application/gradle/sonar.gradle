@@ -1,0 +1,17 @@
+subprojects {
+	apply plugin: "sonar-runner"
+	sonarRunner {
+		sonarProperties {
+			property "sonar.host.url", "http://eng-sonar.ch.flipkart.com:9000"
+			property "sonar.jdbc.url", "jdbc:mysql://eng-sonar.ch.flipkart.com:13306/sonar"
+			property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
+			property "sonar.jdbc.username", "sonar_rw"
+			property "sonar.jdbc.password", "sonar_rw"
+			property "sonar.dynamicAnalysis", "reuseReports"
+			property "sonar.java.coveragePlugin", "jacoco"
+			property "sonar.jacoco.reportPath", "${buildDir}/jacoco/test.exec"
+			property "sonar.junit.reportsPath", "${buildDir}/test-results"
+			property "sonar.projectName", "$project.group:$project.name"
+		}
+	}
+}

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.kristofa:brave-zipkin-spancollector:2.4.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kristofa/brave-zipkin-spancollector/2.4.2/1046f2e0df190919023185d6d6c28499a675c7f2/brave-zipkin-spancollector-2.4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kristofa/brave-zipkin-spancollector/2.4.2/e4cf12f2de1a7edfaf87dda74c4baef9771fc7a7/brave-zipkin-spancollector-2.4.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

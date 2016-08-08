@@ -1,0 +1,89 @@
+databaseConfiguration:
+  # the name of your JDBC driver
+  driverClass: com.mysql.jdbc.Driver
+
+  # the username
+  user: root
+
+  # the password
+  password: ""
+
+  # the JDBC URL
+  url: jdbc:mysql://localhost/pg?zeroDateTimeBehavior=convertToNull
+
+  # any properties specific to your JDBC driver:
+  properties:
+    charSet: UTF-8
+
+  # the maximum amount of time to wait on an empty pool before throwing an exception
+  maxWaitForConnection: 10s
+
+  # the SQL query to run when validating a connection's liveness
+  validationQuery: "/* MyService Health Check */ SELECT 1"
+
+  # the minimum number of connections to keep open
+  minSize: 8
+
+  # the maximum number of connections to keep open
+  maxSize: 100
+
+  # whether or not idle connections should be validated
+  checkConnectionWhileIdle: true
+
+  # how long a connection must be held before it can be validated
+  #checkConnectionHealthWhenIdleFor: 10s
+
+  # the maximum lifetime of an idle connection
+  #closeConnectionIfIdleFor: 1 minute
+
+  # the maximum lifetime of an idle connection
+  maxConnectionAge: 1 minute
+
+  validationInterval: 10s
+
+  minIdleTime: 1 minute
+
+logging:
+  level: INFO
+  loggers:
+    com.flipkart: INFO
+    org.hibernate.SQL: TRACE
+    org.hibernate.engine.jdbc: INFO
+    org.apache.tomcat.jdbc.pool: INFO
+
+  appenders:
+  - type: file
+    threshold: ALL
+    logFormat: "%-5p [%d{ISO8601}] [%X{reqId} %X{txnId}] %replace(%c: %m){'\n', '\n '}%n%replace(%ex){'(?m)^(.)',' $1'}%nopex"
+    currentLogFilename: ./logs/demoapp.log
+    archivedLogFilenamePattern: ./logs/demoapp%d{yyyy-MM-dd-HH}-%i.log.gz
+    archivedFileCount: 50
+    timeZone: IST
+  - type: console
+    timeZone: IST
+    logFormat: "%-5p [%d{ISO8601}] [%X{reqId} %X{txnId}] %c: %m\n%ex"
+      # Do not display log statements below this threshold to stdout.
+    threshold: ALL
+
+
+server:
+  applicationConnectors:
+  - type: http
+    port: 63821
+  adminConnectors:
+  - type: http
+    port: 63822
+  requestLog:
+      timeZone: IST
+      appenders:
+          - type: file
+            logFormat : null
+            currentLogFilename: ./logs/requests.log
+            threshold: ALL
+            archive: true
+            timeZone: IST
+            archivedLogFilenamePattern: ./logs/requests-%d.log.gz
+            archivedFileCount: 5
+
+
+

@@ -1,0 +1,22 @@
+subprojects {
+	apply plugin: 'jacoco'
+
+
+
+	jacocoTestReport {
+		group = "Reporting"
+		description = "Generate Jacoco coverage reports after running tests."
+		additionalSourceDirs = files(sourceSets.main.allJava.srcDirs)
+        afterEvaluate {
+            classDirectories = files(classDirectories.files.collect {
+                fileTree(dir: it, include: '**/com/flipkart/demoapplication/internal/**')
+            })
+        }
+
+		reports {
+			xml.enabled true
+			csv.enabled false
+			html.destination "${buildDir}/jacocoHtml"
+		}
+	}
+}

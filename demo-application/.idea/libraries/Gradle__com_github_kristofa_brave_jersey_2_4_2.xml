@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.kristofa:brave-jersey:2.4.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kristofa/brave-jersey/2.4.2/fc03fc57a05c475c2ceea522cdd58cde8832d4cd/brave-jersey-2.4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kristofa/brave-jersey/2.4.2/3a2b2c0f8798951888ad44477de0dcb1dde39872/brave-jersey-2.4.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
